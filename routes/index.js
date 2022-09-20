@@ -10,3 +10,5 @@ router.get('/', function(req, res) {
 export { 
   router
 }
+
+res.render('index', { title: 'Dev Skills' })
