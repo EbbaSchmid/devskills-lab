@@ -7,6 +7,8 @@ app.get('/', function(req, res) {
 import { Router } from 'express'
 // import the Skills data
 
-import { skills } from '../data/skills-data.js'
+import * as skillsCtrl from '../controllers/skills.js'
+
+router.get('/', skillsCtrl.index)
 
 const router = Router()
