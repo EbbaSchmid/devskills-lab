@@ -13,9 +13,9 @@
     <ul>
         <% skills.forEach(todo => { %>
         <li>
-            <%= skill.activity %> 
+            <%= skill.text %> 
             - 
-            <%= skill.cool ? 'cool' : '' %>
+            <%= skill.done ? 'done' : '' %>
         </li>
         <% }) %>
     </ul>

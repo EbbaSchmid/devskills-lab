@@ -1,7 +1,7 @@
 const skills = [
-    {activity: 'badminton', cool: true, weather: 'no wind'},
-    {activity: 'golf', cool: false, weather: 'no lightening'},
-    {activity: 'basketball', cool: true, weather: 'no rain'},
+    {text: 'badminton', done: true, _id: 'no wind'},
+    {text: 'golf', done: false, _id: 'no lightening'},
+    {text: 'basketball', done: true, _id: 'no rain'},
 ]
 
 export { 
