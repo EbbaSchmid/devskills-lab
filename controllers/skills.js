@@ -13,6 +13,11 @@ function index(req, res) {
     })
 }
 
-    export {
-        index
+function newSkill(req, res) {
+    res.render('skills/new')
+}
+
+export {
+    index,
+    newSkill as new,
 }

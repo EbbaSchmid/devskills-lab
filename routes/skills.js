@@ -12,6 +12,8 @@ router.get('/', function(req, res) {
     res.send('respond with a resource')
 })
 
+router.get('/', skillsCtrl.index)
+router.get('/new', skillsCtrl.new)
 
 router.get('/done', function (req, res){
     res.send('respond with done')
