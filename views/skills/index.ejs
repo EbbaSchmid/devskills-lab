@@ -8,10 +8,9 @@
     <title><%= DevSkills Lab %></title>
 </head>
 <body>
-    <h1><%= Skill List %></h1>
     <h1>Skills</h1>
     <ul>
-        <% skills.forEach(function(todo) { %>
+        <% skills.forEach(skill => { %>
         <li>
             <a href="/skills/<%= skill._id %>"><%= skill.text %></a>
             - 
