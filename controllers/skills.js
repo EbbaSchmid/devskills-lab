@@ -5,8 +5,8 @@ function index(req, res) {
     Skill.find({})
     .then(skills => { 
         res.render('skills/index', {
-        skills: skills,
-    })
+            skills: skills,
+        })
     })
     .catch(error => { 
         console.log(error)
@@ -33,12 +33,12 @@ function show(req, res) {
     Skill.findById(req.params.id)
     .then(skill => {
         res.render('skills/show', {
-        skill : skill
-    })
+            skill: skill
+        })
     })
     .catch(error => {
         console.log(error)
-        res.redirect('/skills')
+        res.redirect('/')
     })
 }
 
