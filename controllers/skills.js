@@ -46,5 +46,5 @@ export {
     index,
     newSkill as new,
     create,
-    show
+    show,
 }
