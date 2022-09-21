@@ -3,7 +3,7 @@ import { Skill } from '../models/skill.js'
 function index(req, res) {
     Skill.find({})
     .then(skills => { // todos represents the result of the query, in this case ALL todos
-        res.render('todos/index', {
+        res.render('skills/index', {
         skills: skills,
     })
     })
