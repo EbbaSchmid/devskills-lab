@@ -4,6 +4,7 @@ import express from 'express'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import logger from 'morgan'
+import methodOverride from 'method-override'
 import "./config/database.js"
 
 // Connect to the database with Mongoose
@@ -23,6 +24,14 @@ app.set(
 )
 app.set('view engine', 'ejs')
 
+
+// custom middleware
+app.use(function(req, res, next) {
+  req.time = new Date().toLocaleTimeString()
+  next()
+})
+
+
 // middleware
 app.use(logger('dev'))
 app.use(express.json())
@@ -32,6 +41,8 @@ app.use(
     path.join(path.dirname(fileURLToPath(import.meta.url)), 'public')
   )
 )
+app.use(methodOverride('_method'))
+
 
 // mounted routers
 app.use('/', indexRouter)
